@@ -9,7 +9,7 @@ import io.cucumber.java.en.When;
 public class LoginSteps {
     @Given("teacher is on login page")
     public void teacher_is_on_login_page() {
-        System.out.println(" Given - Precondition");
+        System.out.println(" Given - Precondition V2");
     }
 
     @When("teacher enters email and password")
