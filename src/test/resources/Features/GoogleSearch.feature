@@ -1,5 +1,5 @@
 Feature: google search bar
-  @Search
+  //@Smoke
   Scenario: user search by typing something on the search bar and pressing Enter
     Given browser is open
     And user is on google search page

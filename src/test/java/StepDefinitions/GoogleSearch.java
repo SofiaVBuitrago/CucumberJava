@@ -23,7 +23,7 @@ public class GoogleSearch {
         System.setProperty("webdriver.edge.driver", MyProjectPath + "/src/test/resources/Drivers/msedgedriver.exe");
 
         driver = new EdgeDriver();
-       /* driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);*/
+        driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
         driver.manage().timeouts().pageLoadTimeout(10,TimeUnit.SECONDS);
        /* driver.get("http://learn-automation.com/launch-chrome-browser-using-selenium-webdriver/");*/
     }
@@ -45,10 +45,15 @@ public class GoogleSearch {
     @Then("the user is sent to search results")
     public void the_user_is_sent_to_search_results() {
         System.out.println(" Then - Expected Result (search results page load)");
-        driver.getPageSource().contains("GitHub Desktop");
 
-        driver.close();
-        driver.quit();
+        if (driver.findElement(By.className("l")).isDisplayed()){
+            System.out.println("YES WE ARE IN");
+        }else{
+            System.out.println("OH NO I FAILED :V");
+        }
+
+            driver.close();
+            driver.quit();
     }
 
 }
