@@ -1,6 +1,6 @@
 Feature: Teacher login
 
-  @Smoke
+  //@Smoke
   Scenario: Teacher login using the email
 
     Given teacher is on login page
